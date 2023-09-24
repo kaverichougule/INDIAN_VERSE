@@ -1,0 +1,348 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;0,800;1,500&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;0,800;1,500&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    background: black;
+}
+.section1{
+    height: 55vh;
+    display: flex;
+    justify-content: top;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 6rem;
+}
+.heading{
+    font-family: 'Luckiest Guy', sans-serif;
+    font-size: 12rem;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    /* text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; */
+    background-image: url(../images/India1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    animation: image_change 15s alternate infinite ease-in-out;
+}
+@keyframes image_change {
+    0%{
+        background-image: url(../images/India2.jpg);
+    }
+    25%{
+        background-image: url(../images/India2.jpg);
+    }
+    50%{
+        background-image: url(../images/India4.jpg);
+    }
+    75%{
+        background-image: url(../images/India3.jpg);
+    }
+    100%{
+        background-image: url(../images/India5.jpg);
+    }
+}
+
+.subheading{
+    color: #DBDBDB;
+    font-size: 3rem;
+}
+.container{
+    max-width: 80%;
+    margin: auto;
+    text-align: center;
+}
+.navbar{
+    margin-bottom: 2rem;
+}
+label {
+    color:#7d8597;
+    background-color: #030c1f;
+    padding: 1rem;
+    border-radius: 5px;
+    margin-right: 0.5rem;
+    font-weight: 600;   
+    font-size: 1.2rem; 
+    font-family: 'Roboto',sans-serif;
+    cursor: pointer;
+    display: inline-block;
+    margin-bottom: 0.5rem;
+    transition: all 1s ease;
+}
+label:hover{
+    background-color: #1b263b;
+    color: white;
+    box-shadow: 0 4px 6px -1px rgba(255, 255, 255, 0.09);
+}
+
+.container .image-container{
+    columns:3 250px;
+    gap: 15px;
+    position: relative;
+}
+.container .image-container img{
+    margin-bottom: 10px;
+    border-radius: 5px;
+    width: 100%; 
+}
+img:hover {
+    animation: zoom-img 1s alternate;
+    animation-iteration-count: 2;
+}
+
+@keyframes zoom-img {
+    100%{
+        transform: scale(1.1);
+    }
+}
+
+input{
+    display: none;
+}
+
+#check1:checked ~ .container .image-container pic {
+    display: flex;
+    transform: scale(1);
+    position: relative;
+    transition: 0.5s;
+}
+#check2:checked ~ .container .image-container .delhi{
+    transform: scale(1);
+    position: relative;
+    transition: 0.5s;
+}
+
+#check2:checked ~ .container .image-container .goa,
+#check2:checked ~ .container .image-container .guj,
+#check2:checked ~ .container .image-container .hm,
+#check2:checked ~ .container .image-container .ka,
+#check2:checked ~ .container .image-container .maha,
+#check2:checked ~ .container .image-container .raj,
+#check2:checked ~ .container .image-container .up {
+  display: none;
+  transform: scale(0);
+  position: absolute;
+  transition: 0.5s;
+}
+
+#check3:checked ~ .container .image-container .goa{
+    transform: scale(1);
+    position: relative;
+    transition: 0.5s;
+}
+
+#check3:checked ~ .container .image-container .delhi,
+#check3:checked ~ .container .image-container .guj,
+#check3:checked ~ .container .image-container .hm,
+#check3:checked ~ .container .image-container .ka,
+#check3:checked ~ .container .image-container .maha,
+#check3:checked ~ .container .image-container .raj,
+#check3:checked ~ .container .image-container .up {
+  display: none;
+  transform: scale(0);
+  position: absolute;
+  transition: 0.5s;
+}
+
+#check4:checked ~ .container .image-container .guj{
+    transform: scale(1);
+    position: relative;
+    transition: 0.5s;
+}
+
+#check4:checked ~ .container .image-container .delhi,
+#check4:checked ~ .container .image-container .goa,
+#check4:checked ~ .container .image-container .hm,
+#check4:checked ~ .container .image-container .ka,
+#check4:checked ~ .container .image-container .maha,
+#check4:checked ~ .container .image-container .raj,
+#check4:checked ~ .container .image-container .up {
+  display: none;
+  transform: scale(0);
+  position: absolute;
+  transition: 0.5s;
+}
+
+#check5:checked ~ .container .image-container .hm{
+    transform: scale(1);
+    position: relative;
+    transition: 0.5s;
+}
+
+#check5:checked ~ .container .image-container .delhi,
+#check5:checked ~ .container .image-container .goa,
+#check5:checked ~ .container .image-container .guj,
+#check5:checked ~ .container .image-container .ka,
+#check5:checked ~ .container .image-container .maha,
+#check5:checked ~ .container .image-container .raj,
+#check5:checked ~ .container .image-container .up {
+  display: none;
+  transform: scale(0);
+  position: absolute;
+  transition: 0.5s;
+}
+
+#check6:checked ~ .container .image-container .ka{
+    transform: scale(1);
+    position: relative;
+    transition: 0.5s;
+}
+
+#check6:checked ~ .container .image-container .delhi,
+#check6:checked ~ .container .image-container .goa,
+#check6:checked ~ .container .image-container .guj,
+#check6:checked ~ .container .image-container .hm,
+#check6:checked ~ .container .image-container .maha,
+#check6:checked ~ .container .image-container .raj,
+#check6:checked ~ .container .image-container .up {
+  display: none;
+  transform: scale(0);
+  position: absolute;
+  transition: 0.5s;
+}
+
+#check7:checked ~ .container .image-container .maha{
+    transform: scale(1);
+    position: relative;
+    transition: 0.5s;
+}
+
+#check7:checked ~ .container .image-container .delhi,
+#check7:checked ~ .container .image-container .goa,
+#check7:checked ~ .container .image-container .guj,
+#check7:checked ~ .container .image-container .hm,
+#check7:checked ~ .container .image-container .ka,
+#check7:checked ~ .container .image-container .raj,
+#check7:checked ~ .container .image-container .up {
+  display: none;
+  transform: scale(0);
+  position: absolute;
+  transition: 0.5s;
+}
+
+#check8:checked ~ .container .image-container .raj{
+    transform: scale(1);
+    position: relative;
+    transition: 0.5s;
+}
+
+#check8:checked ~ .container .image-container .delhi,
+#check8:checked ~ .container .image-container .goa,
+#check8:checked ~ .container .image-container .guj,
+#check8:checked ~ .container .image-container .hm,
+#check8:checked ~ .container .image-container .ka,
+#check8:checked ~ .container .image-container .maha,
+#check8:checked ~ .container .image-container .up {
+  display: none;
+  transform: scale(0);
+  position: absolute;
+  transition: 0.5s;
+}
+
+#check9:checked ~ .container .image-container .up{
+    transform: scale(1);
+    position: relative;
+    transition: 0.5s;
+}
+
+#check9:checked ~ .container .image-container .delhi,
+#check9:checked ~ .container .image-container .goa,
+#check9:checked ~ .container .image-container .guj,
+#check9:checked ~ .container .image-container .hm,
+#check9:checked ~ .container .image-container .ka,
+#check9:checked ~ .container .image-container .maha,
+#check9:checked ~ .container .image-container .raj{
+  display: none;
+  transform: scale(0);
+  position: absolute;
+  transition: 0.5s;
+}
+
+  @media (max-width: 1135px) {
+    .section1 {
+      justify-content: center;
+      margin-top: 4rem;
+      transition: all 1s ease;
+    }
+    .heading {
+      font-size: 9rem;
+    }
+    .subheading {
+      font-size: 2.5rem;
+    }
+  }
+  @media (max-width: 870px) {
+    .section1 {
+      justify-content: center;
+      margin-top: 3rem;
+      transition: all 1s ease;
+    }
+    .heading {
+      font-size: 7rem;
+    }
+    
+    .subheading {
+      font-size: 2rem;
+    }
+  }
+  
+@media (max-width: 768px) {
+    .section1 {
+        justify-content: center;
+        margin-top: 3rem;
+        transition: all 1s ease;
+    }
+    .heading {
+        font-size: 7rem;
+    }
+    .subheading {
+        font-size: 2rem;
+    }
+    
+  }
+  @media (max-width: 700px) {
+    .section1 {
+      justify-content: center;
+      margin-top: 3rem;
+      transition: all 1s ease;
+    }
+    .heading {
+      font-size: 6rem;
+    }
+    
+    label{
+        font-size: 1rem;
+        font-weight: 500;
+    }
+    .subheading {
+      font-size: 1.5rem;
+    }
+  }
+
+
+  @media (max-width: 599px) {
+    .section1 {
+      justify-content: center;
+      margin-top: 3rem;
+      transition: all 1s ease;
+    }
+    .heading {
+      font-size: 6rem;
+      margin-left: 5rem;
+      margin-right: 5rem;
+    }
+    label{
+        font-size: 0.8rem;
+        font-weight: 500;
+    }
+    .subheading {
+      font-size: 1.3rem;
+    }
+  }
